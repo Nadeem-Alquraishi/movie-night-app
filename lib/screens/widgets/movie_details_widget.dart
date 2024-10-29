@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:movies_night/api/cubits/movie_cubit/movie_cubit.dart';
 import 'package:movies_night/api/dependency_injection/git_it_locator.dart';
@@ -65,6 +67,7 @@ class MovieDetails extends StatelessWidget {
               GestureDetector(
                   onTap: () {
                     getIt<MovieCubit>().addFavoriteMovie(movieId);
+                    log('add favorite : ${movie.originalTitle}');
                   },
                   child: Icon(Icons.favorite,
                       color: isFavorite ? Colors.grey : Colors.red, size: 25)),

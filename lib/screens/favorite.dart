@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_night/api/cubits/movie_cubit/movie_cubit.dart';
 import 'package:movies_night/api/cubits/movie_cubit/movie_state_cubit.dart';
+import 'package:movies_night/api/dependency_injection/git_it_locator.dart';
 
 // ignore: must_be_immutable
 class FavoritesScreen extends StatelessWidget {
@@ -134,7 +137,11 @@ class FavoritesScreen extends StatelessWidget {
                                   left:
                                       MediaQuery.of(context).size.width * 0.05),
                               child: GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    getIt<MovieCubit>()
+                                        .deleteFavoriteMovie(movie!.id!);
+                                    log('delete favorite movie: ${movie.title}');
+                                  },
                                   child: Icon(Icons.favorite,
                                       color:
                                           isFavorite ? Colors.grey : Colors.red,
