@@ -109,8 +109,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movies_night/screens/favorite.dart';
-import 'package:movies_night/screens/profile.dart';
+import 'package:movies_night/presentation/screens/favorite.dart';
+import 'package:movies_night/presentation/screens/profile.dart';
 
 class NaviBar extends StatelessWidget {
   const NaviBar({

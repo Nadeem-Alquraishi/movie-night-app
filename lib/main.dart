@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movies_night/api/cubits/movie_cubit/movie_cubit.dart';
-import 'package:movies_night/api/dependency_injection/git_it_locator.dart';
-import 'package:movies_night/screens/favorite.dart';
-import 'package:movies_night/screens/home.dart';
-import 'package:movies_night/screens/profile.dart';
+import 'package:movies_night/core/api/cubits/movie_cubit/movie_cubit.dart';
+import 'package:movies_night/core/api/dependency_injection/git_it_locator.dart';
+
+import 'package:movies_night/presentation/screens/favorite.dart';
+import 'package:movies_night/presentation/screens/home.dart';
+import 'package:movies_night/presentation/screens/profile.dart';
 
 void main() {
   injection();
