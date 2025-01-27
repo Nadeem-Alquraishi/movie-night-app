@@ -7,7 +7,7 @@ import 'package:movies_night/core/api/models/account_model.dart';
 import 'package:movies_night/core/api/models/favorite_movie_model.dart';
 import 'package:movies_night/core/api/models/movie_details_model.dart';
 import 'package:movies_night/core/api/models/movie_model.dart';
-import 'package:movies_night/core/api/models/people_model.dart';
+
 import 'package:movies_night/core/api/models/story_today.dart';
 import 'package:movies_night/core/api/models/top_rated_model.dart';
 import 'package:movies_night/presentation/screens/credits/model/credits_model.dart';
@@ -51,20 +51,7 @@ class MovieCubit extends Cubit<MovieCubitState> {
     }
   }
 
-  // Future<void> getMovieDetails(int movieId) async {
-  //   emit(MovieCubitLoading());
-  //   await Future.delayed(const Duration(seconds: 1));
-  //   Dio dio = _createDio();
-  //   try {
-  //     final response = await dio.get('$baseUrl/movie/$movieId?api_key=$apiKey');
-  //     MovieDetailsModel movieDetails =
-  //         MovieDetailsModel.fromJson(response.data);
-  //     emit(MovieCubitSuccess(movieDetails: movieDetails));
-  //   } on DioException catch (e) {
-  //     log(e.toString());
-  //     emit(MovieCubitError(message: e.message));
-  //   }
-  // }
+
   bool isMovieFavorite(int movieId) {
     // Check if the movie is in the list of favorite movies
     if (favoriteMoviess != null) {
